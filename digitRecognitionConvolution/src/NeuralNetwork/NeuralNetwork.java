@@ -49,7 +49,7 @@ public class NeuralNetwork implements Serializable {
         return network;
     }
 
-    public static NeuralNetwork NeuralNetworkCreatorPerceptron_v01() {
+    public static NeuralNetwork  NeuralNetworkCreatorPerceptron_v01() {
         double initialWeightsStart = -1; // bottom value, then range is added
         double initialWeightsRange = 2;
         double initialBiasStart = 0;
@@ -63,8 +63,8 @@ public class NeuralNetwork implements Serializable {
         NeuralNetwork network = new NeuralNetwork(initialWeightsStart, initialWeightsRange, initialBiasStart, initialBiasRange, learningRate, batchSize, inputSize, optimizationAlgorithm, lossFunction);
 
         network.addFlatteningLayer();
+        network.addDenseLayer(64, new ReLuActivation());
         network.addDenseLayer(32, new ReLuActivation());
-        network.addDenseLayer(16, new ReLuActivation());
         network.addDenseLayer(10, new SoftMaxActivation());
 
         return network;

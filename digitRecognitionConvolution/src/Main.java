@@ -40,11 +40,11 @@ public class Main {
         //---------------------------------------------------------------------------------------------------------------------
         // learning
 
-        //NeuralNetwork network = NeuralNetwork.NeuralNetworkCreatorPerceptron_v01();
-        //NeuralNetwork network = NeuralNetwork.NeuralNetworkCreatorConvolutional_v01();
-        //network.processImageGetOneNumber(trainImages[0]);
-        //network.CalculateDerivativesWithValidationEveryStep(trainImages, trainLabels, validationImages, validationLabels, 5000, 13);
-        //network.saveNeuralNetworktoFile("convolutionalSave_v01.1.dat");
+//        NeuralNetwork network = NeuralNetwork.NeuralNetworkCreatorPerceptron_v01();
+//        // NeuralNetwork network = NeuralNetwork.NeuralNetworkCreatorConvolutional_v01();
+//        network.processImageGetOneNumber(trainImages[0]);
+//        network.CalculateDerivativesWithValidationEveryStep(trainImages, trainLabels, validationImages, validationLabels, 5000, 13);
+//        network.saveNeuralNetworktoFile("convolutionalSave_v01.3.dat");
 
 
 
@@ -52,7 +52,7 @@ public class Main {
         //---------------------------------------------------------------------------------------------------------------------
         // looking how it work
 
-        NeuralNetwork network = NeuralNetwork.loadNeuralNetworkFromFile("convolutionalSave_v01.1.dat");
+        NeuralNetwork network = NeuralNetwork.loadNeuralNetworkFromFile("convolutionalSave_v01.3.dat");
         network.showImagesAndProcess(guessImages, 0);
     }
 }
